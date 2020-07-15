@@ -1,1 +1,3 @@
-bin/
+**/[Tt]humbs.db
+[Bb]in/
+[Dd]ebug*/
