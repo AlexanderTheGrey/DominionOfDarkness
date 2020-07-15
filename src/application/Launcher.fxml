@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="893.0" prefWidth="426.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LauncherController">
+   <children>
+      <ImageView fitHeight="930.0" fitWidth="590.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Tower.png" />
+         </image>
+      </ImageView>
+      <Button id="launchGameButton" layoutX="162.0" layoutY="513.0" mnemonicParsing="false" onAction="#launchGame" prefHeight="10.0" prefWidth="310.0" text="Enter the Dark Tower" textFill="#973b3b">
+         <effect>
+            <SepiaTone />
+         </effect></Button>
+      <Button id="exitButton" layoutX="162.0" layoutY="642.0" mnemonicParsing="false" onAction="#closeWindowAction" prefHeight="10.0" prefWidth="310.0" text="Turn Back in Fear" textFill="#973b3b">
+         <effect>
+            <SepiaTone />
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>
