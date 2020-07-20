@@ -1,5 +1,17 @@
 package application;
 
+//weapons
+import weapons.Weapon_Stick;
+import weapons.Weapon_Knife;
+import weapons.Weapon_Sword;
+import weapons.Weapon_Lightsaber;
+
+//player
+import player.Player;
+
+//enemies
+import enemies.Enemy_Orc;
+
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -15,6 +27,28 @@ public class GameController {
 	
 	@FXML
 	public void initialize() {
+		
+		//player stats
+		Player player = new Player();
+		Text playerHP = new Text("Hello, Your HP is " + player.hp +"\n");
+		playerHP.setFill(Color.ANTIQUEWHITE);
+		playerHP.setFont(Font.font("Copperplate Gothic Bold", FontPosture.ITALIC, 25));
+		gameText.getChildren().add(playerHP);
+		
+		//stick weapon 
+		Weapon_Stick stick = new Weapon_Stick();
+		Text weapon = new Text("Your weapon is " + stick.name +" and does " + stick.dmg + "damage!\n");
+		weapon.setFill(Color.ANTIQUEWHITE);
+		weapon.setFont(Font.font("Copperplate Gothic Bold", FontPosture.ITALIC, 25));
+		gameText.getChildren().add(weapon);
+		
+		//orc stats
+		Enemy_Orc orc = new Enemy_Orc();
+		Text enemy = new Text("You encounter an " +orc.name+" with " + orc.hp +" hp and does " + orc.dmg + " damage!");
+		enemy.setFill(Color.ANTIQUEWHITE);
+		enemy.setFont(Font.font("Copperplate Gothic Bold", FontPosture.ITALIC, 25));
+		gameText.getChildren().add(enemy);
+		
 		
 		/* Text t1 = new Text("YOU HAVE ENTERED THE GREAT GATES OF AN UKNOWN LAND.\n\n\n\n\n");
 		Text t2 = new Text("It's cold and wet. A strong stench of rotten flesh meets your nostrils and reminds you of the peril that has been bestowed upon these lands.\n\n");
@@ -90,4 +124,6 @@ public class GameController {
 
     }
 	
+	
 }
+
