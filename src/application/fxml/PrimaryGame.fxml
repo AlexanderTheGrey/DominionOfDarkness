@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="root" minHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PrimaryGameController">
+   <children>
+      <ImageView fitHeight="1080.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/in-game/graphics/PrimaryGameBackground.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="closeGameButton" layoutX="1857.0" layoutY="14.0" mnemonicParsing="false" onAction="#closeGameAction" text="EXIT" />
+   </children>
+</AnchorPane>

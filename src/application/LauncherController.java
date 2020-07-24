@@ -13,12 +13,18 @@ import javafx.scene.layout.BackgroundImage;
 import javafx.scene.layout.BackgroundPosition;
 import javafx.scene.layout.BackgroundRepeat;
 import javafx.scene.layout.BackgroundSize;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 
 public class LauncherController {
 	
+	@FXML private AnchorPane root;
+	
 	@FXML private Button launchGameButton;
 	@FXML private Button closeGameLauncherButton;
+	
+	protected static MediaPlayer mp;
 	
 	@FXML
 	public void launchGame(ActionEvent event) {
@@ -30,23 +36,23 @@ public class LauncherController {
 			Stage gameStage = new Stage();
 			
 			Main.mp.stop();
-			Image gameImageBackground = new Image("/application/resources/in-game/graphics/TestGameBackground4.jpg");
+			Main.mp.dispose();
 			
-		    BackgroundSize bSize = new BackgroundSize(BackgroundSize.AUTO, BackgroundSize.AUTO, false, false, true, false);
-		    root.setBackground(new Background(new BackgroundImage(gameImageBackground,
-		            BackgroundRepeat.NO_REPEAT,
-		            BackgroundRepeat.NO_REPEAT,
-		            BackgroundPosition.CENTER,
-		            bSize)));
+			String path = Main.class.getResource("/application/resources/game_menu/music/GameMenu.mp3").toString();
+	        Media media = new Media(path);
+	        mp = new MediaPlayer(media);
+	        int loop = mp.INDEFINITE;
+	        mp.setCycleCount(loop);
+	        mp.play();
 		    
 			scene.getStylesheets().add(getClass().getResource("/application/fxml/application.css").toExternalForm());
 			gameStage.setScene(scene);
 			
 			gameStage.setFullScreen(true);
-			//gameStage.setResizable(false);
-			//gameStage.initStyle(StageStyle.UNDECORATED);
 			
 			gameStage.setTitle("Dominion of Darkness");
+			
+			gameStage.getIcons().add(new Image(Main.class.getResource("/application/resources/Icon.png").toString()));
 
 			gameStage.show();
 			

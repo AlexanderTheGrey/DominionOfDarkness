@@ -11,27 +11,49 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.media.AudioClip;
 
 public class GameMenuController implements Initializable {
 	
-	@FXML AnchorPane root;
+	@FXML private AnchorPane root;
 	
-	@FXML Button closeGameButton;
+	@FXML Button newGameButton;
+	@FXML Button creditsButton;
+	@FXML Button exitGameMenuButton;
 	
 	
+	@FXML
+	void loadNewGame(ActionEvent event) {
+		
+		LauncherController.mp.stop();
+		LauncherController.mp.dispose();
+		
+		String path = Main.class.getResource("/application/resources/in-game/sound_effects/Horror Scary Male Demon Talk 01.wav").toString();
+		AudioClip a = new AudioClip(path);
+		a.play();
 
+		try {
+			AnchorPane newGamePane = (AnchorPane)FXMLLoader.load(getClass().getResource("/application/fxml/PrimaryGame.fxml"));
+			this.root.getChildren().setAll(newGamePane);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	
+    @FXML
+    void loadCredits(ActionEvent event) {
+
+    }
+
+    
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 
-		/*AnchorPane needGivePane;
-		try {
-			needGivePane = (AnchorPane)FXMLLoader.load(getClass().getResource("GameMenu.fxml"));
-			root.getChildren().setAll(needGivePane);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}*/
+		
 
 	}
+	
 	
 	@FXML
     void closeGameMenuAction(ActionEvent event) {
