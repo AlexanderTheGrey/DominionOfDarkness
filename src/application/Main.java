@@ -3,7 +3,6 @@ package application;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import javafx.util.Duration;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
@@ -32,7 +31,7 @@ public class Main extends Application {
 			String path = Main.class.getResource("/application/resources/launcher/music/launch-music.mp3").toString();
 	        Media media = new Media(path);
 	        mp = new MediaPlayer(media);
-	        int loop = mp.INDEFINITE;
+	        int loop = MediaPlayer.INDEFINITE;
 	        mp.setCycleCount(loop);
 	        mp.play();
 			
@@ -45,6 +44,7 @@ public class Main extends Application {
 			e.printStackTrace();
 		}
 	}
+	
 	
 	public static void main(String[] args) {
 		launch(args);

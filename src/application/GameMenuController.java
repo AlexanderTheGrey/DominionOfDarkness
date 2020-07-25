@@ -17,9 +17,9 @@ public class GameMenuController implements Initializable {
 	
 	@FXML private AnchorPane root;
 	
-	@FXML Button newGameButton;
-	@FXML Button creditsButton;
-	@FXML Button exitGameMenuButton;
+	@FXML private Button newGameButton;
+	@FXML private Button creditsButton;
+	@FXML private Button exitGameMenuButton;
 	
 	
 	@FXML

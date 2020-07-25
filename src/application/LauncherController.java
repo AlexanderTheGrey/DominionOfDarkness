@@ -8,11 +8,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundImage;
-import javafx.scene.layout.BackgroundPosition;
-import javafx.scene.layout.BackgroundRepeat;
-import javafx.scene.layout.BackgroundSize;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
@@ -41,7 +36,7 @@ public class LauncherController {
 			String path = Main.class.getResource("/application/resources/game_menu/music/GameMenu.mp3").toString();
 	        Media media = new Media(path);
 	        mp = new MediaPlayer(media);
-	        int loop = mp.INDEFINITE;
+	        int loop = MediaPlayer.INDEFINITE;
 	        mp.setCycleCount(loop);
 	        mp.play();
 		    
@@ -60,6 +55,7 @@ public class LauncherController {
 			e.printStackTrace();
 		}
 	}
+	
 	
 	@FXML
     void closeWindowAction(ActionEvent event) {

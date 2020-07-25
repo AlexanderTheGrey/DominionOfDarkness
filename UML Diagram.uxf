@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1136</x>
+      <y>112</y>
+      <w>144</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>*Main*
+--
+#mp: MediaPlayer
+--
++start(primaryStage: Stage)
++launch(args: String[])</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>752</x>
+      <y>48</y>
+      <w>216</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>*LauncherController*
+--
+-root: AnchorPane
+-launchGameButton: Button
+-closeGameLauncherButton: Button
+#mp: MediaPlayer
+--
++launchGame(event: ActionEvent)
+#closeWindowAction(event: ActionEvent)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>736</x>
+      <y>224</y>
+      <w>272</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>*GameMenuController*
+--
+-root: AnchorPane
+-newGameButton: Button
+-creditsButton: Button
+-exitGameButton: Button
+--
+#loadNewGame(event: ActionEvent)
+#loadCredits(event: ActionEvent)
++initialize(location: URL, resources: ResourceBundle)
+#closeGameMenuAction(event: ActionEvent)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1064</x>
+      <y>264</y>
+      <w>272</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>*PrimaryGameController*
+--
+-root: AnchorPane
+-closeGameButton: Button
+--
++initialize(location: URL, resources: ResourceBundle)
+#closeGameAction(event: ActionEvent)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1296</x>
+      <y>24</y>
+      <w>272</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+*Initializable*
+--
+
+--
++initialize(location: URL, resources: ResourceBundle)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1168</x>
+      <y>32</y>
+      <w>80</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>*Application*
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>344</x>
+      <y>48</y>
+      <w>80</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>*Model*
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1200</x>
+      <y>56</y>
+      <w>24</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>960</x>
+      <y>88</y>
+      <w>192</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;10.0;220.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>848</x>
+      <y>144</y>
+      <w>24</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1000</x>
+      <y>280</y>
+      <w>80</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1000</x>
+      <y>80</y>
+      <w>392</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;190.0;470.0;190.0;470.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1328</x>
+      <y>56</y>
+      <w>144</w>
+      <h>256</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;300.0;160.0;300.0;160.0;10.0</additional_attributes>
+  </element>
+</diagram>
