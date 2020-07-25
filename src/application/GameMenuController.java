@@ -28,7 +28,7 @@ public class GameMenuController implements Initializable {
 		LauncherController.mp.stop();
 		LauncherController.mp.dispose();
 		
-		String path = Main.class.getResource("/application/resources/in-game/sound_effects/Horror Scary Male Demon Talk 01.wav").toString();
+		String path = Main.class.getResource("/application/resources/in_game/sound_effects/Horror Scary Male Demon Talk 01.wav").toString();
 		AudioClip a = new AudioClip(path);
 		a.play();
 

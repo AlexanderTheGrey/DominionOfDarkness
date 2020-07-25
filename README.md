@@ -3,10 +3,10 @@ Project Name: Dominion of Darkness
 Team Name: Dominion Games
 
 Team Members:
-	Alexander Allen (Team Lead)
-	Michael Bisping
-	Andreas Gaul
-	Christopher Martinez
+	Alexander Allen (Team Lead),
+	Michael Bisping,
+	Andreas Gaul,
+	Christopher Martinez,
 	Luke Puente
 
 Game Description:

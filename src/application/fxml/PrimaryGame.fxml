@@ -11,7 +11,7 @@
    <children>
       <ImageView fitHeight="1080.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../resources/in-game/graphics/PrimaryGameBackground.jpg" />
+            <Image url="@../resources/in_game/graphics/PrimaryGameBackground.jpg" />
          </image>
       </ImageView>
       <Button fx:id="closeGameButton" layoutX="1857.0" layoutY="14.0" mnemonicParsing="false" onAction="#closeGameAction" text="EXIT" />
