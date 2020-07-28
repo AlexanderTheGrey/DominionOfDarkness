@@ -15,7 +15,7 @@ import javafx.scene.media.MediaPlayer;
 public class PrimaryGameController implements Initializable {
 	
 	@FXML private AnchorPane root;
-	
+		
 	private static MediaPlayer mp;
 	
 	@FXML private Button closeGameButton;
@@ -23,12 +23,14 @@ public class PrimaryGameController implements Initializable {
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
 
-		String path = Main.class.getResource("/application/resources/in_game/ambient_music/PrimaryGameAmbientMusic.m4a").toString();
-		Media media = new Media(path);
-		mp = new MediaPlayer(media);
+		String path1 = Main.class.getResource("/application/resources/in_game/ambient_music/PrimaryGameAmbientMusic.m4a").toString();
+		Media musicmedia = new Media(path1);
+		mp = new MediaPlayer(musicmedia);
+		
 		int loop = MediaPlayer.INDEFINITE;
 		mp.setCycleCount(loop);
-		mp.play();
+		
+		mp.play();	
 	}
 
 	

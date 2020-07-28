@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="root" minHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CreditsController">
+   <children>
+      <PointLight color="CHARTREUSE" lightOn="true" />
+      <ImageView fitHeight="1080.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/game_menu/graphics/GameMenu.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="navigateToGameMenuButton" layoutX="20.0" layoutY="978.0" mnemonicParsing="false" onAction="#navigateToGameMenu" prefHeight="82.0" prefWidth="239.0" text="Menu" textFill="#6e0000" />
+      <Text fx:id="creditAndreasText" fill="WHITE" fontSmoothingType="LCD" layoutX="762.0" layoutY="645.0" opacity="0.8" strokeType="OUTSIDE" strokeWidth="0.0" text="Earl Andreas Gaul" visible="false" wrappingWidth="350.587890625">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="32.0" />
+         </font>
+      </Text>
+      <Text fx:id="creditMichaelText" fill="WHITE" fontSmoothingType="LCD" layoutX="767.0" layoutY="485.0" opacity="0.8" strokeType="OUTSIDE" strokeWidth="0.0" text="Duke Michael Bisping" visible="false" wrappingWidth="417.90625">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="32.0" />
+         </font>
+      </Text>
+      <Text fx:id="creditChristopherText" fill="WHITE" fontSmoothingType="LCD" layoutX="762.0" layoutY="566.0" opacity="0.8" strokeType="OUTSIDE" strokeWidth="0.0" text="Knight Christopher Martinez" visible="false">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="32.0" />
+         </font>
+      </Text>
+      <Text fx:id="creditAlexanderText" fill="WHITE" fontSmoothingType="LCD" layoutX="762.0" layoutY="400.0" opacity="0.8" strokeType="OUTSIDE" strokeWidth="0.0" text="Lord Alexander Allen" visible="false" wrappingWidth="427.017578125">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="32.0" />
+         </font>
+      </Text>
+      <Text fx:id="creditLukeText" fill="WHITE" fontSmoothingType="LCD" layoutX="762.0" layoutY="725.0" opacity="0.8" strokeType="OUTSIDE" strokeWidth="0.0" text="Viscount Luke Puente" visible="false">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="32.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

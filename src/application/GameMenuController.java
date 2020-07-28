@@ -43,6 +43,13 @@ public class GameMenuController implements Initializable {
 	
     @FXML
     void loadCredits(ActionEvent event) {
+    	
+    	try {
+			AnchorPane creditsPane = (AnchorPane)FXMLLoader.load(getClass().getResource("/application/fxml/CreditsMenu.fxml"));
+			this.root.getChildren().setAll(creditsPane);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 
     }
 

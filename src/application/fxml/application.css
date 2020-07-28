@@ -65,3 +65,16 @@
     -fx-background-color: black;
     -fx-text-fill: white;
 }
+
+#navigateToGameMenuButton {
+		
+	-fx-border-color: grey;
+	-fx-background-color: rgba(255,255,255,0.25);
+	-fx-font-family: "Copperplate Gothic Bold";
+	-fx-font-size: 2em;
+}
+
+#navigateToGameMenuButton:pressed {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
