@@ -78,3 +78,192 @@
     -fx-background-color: black;
     -fx-text-fill: white;
 }
+
+
+
+#peakButton {
+		
+	-fx-border-color: grey;
+	-fx-background-color: rgba(255,255,255,0.25);
+	-fx-font-family: "Copperplate Gothic Bold";
+}
+
+#peakButton:pressed {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
+
+#hallButton {
+		
+	-fx-border-color: grey;
+	-fx-background-color: rgba(255,255,255,0.25);
+	-fx-font-family: "Copperplate Gothic Bold";
+}
+
+#hallButton:pressed {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
+
+#woodsButton {
+		
+	-fx-border-color: grey;
+	-fx-background-color: rgba(255,255,255,0.25);
+	-fx-font-family: "Copperplate Gothic Bold";
+}
+
+#woodsButton:pressed {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
+
+#watchTowerButton {
+		
+	-fx-border-color: grey;
+	-fx-background-color: rgba(255,255,255,0.25);
+	-fx-font-family: "Copperplate Gothic Bold";
+}
+
+#watchTowerButton:pressed {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
+
+#willowButton {
+		
+	-fx-border-color: grey;
+	-fx-background-color: rgba(255,255,255,0.25);
+	-fx-font-family: "Copperplate Gothic Bold";
+}
+
+#willowButton:pressed {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
+
+#cliifssButton {
+		
+	-fx-border-color: grey;
+	-fx-background-color: rgba(255,255,255,0.25);
+	-fx-font-family: "Copperplate Gothic Bold";
+}
+
+#cliifssButton:pressed {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
+
+#cityGravesButton {
+		
+	-fx-border-color: grey;
+	-fx-background-color: rgba(255,255,255,0.25);
+	-fx-font-family: "Copperplate Gothic Bold";
+}
+
+#cityGravesButton:pressed {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
+
+#citySubmergedButton {
+		
+	-fx-border-color: grey;
+	-fx-background-color: rgba(255,255,255,0.25);
+	-fx-font-family: "Copperplate Gothic Bold";
+}
+
+#citySubmergedButton:pressed {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
+
+#shipButton {
+		
+	-fx-border-color: grey;
+	-fx-background-color: rgba(255,255,255,0.25);
+	-fx-font-family: "Copperplate Gothic Bold";
+}
+
+#shipButton:pressed {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
+
+#depthsButton {
+		
+	-fx-border-color: grey;
+	-fx-background-color: rgba(255,255,255,0.25);
+	-fx-font-family: "Copperplate Gothic Bold";
+}
+
+#depthsButton:pressed {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
+
+#inventoryButton {
+		
+	-fx-border-color: grey;
+	-fx-background-color: rgba(255,255,255,0.25);
+	-fx-font-family: "Copperplate Gothic Bold";
+	-fx-font-size: 20pt;
+}
+
+#inventoryButton:pressed {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
+
+#statsButton {
+		
+	-fx-border-color: grey;
+	-fx-background-color: rgba(255,255,255,0.25);
+	-fx-font-family: "Copperplate Gothic Bold";
+	-fx-font-size: 20pt;
+}
+
+#statsButton:pressed {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
+
+#primaryGameExitButton {
+		
+	-fx-border-color: grey;
+	-fx-background-color: rgba(255,255,255,0.25);
+	-fx-font-family: "Copperplate Gothic Bold";
+	-fx-font-size: 14pt;
+}
+
+#primaryGameExitButton:pressed {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
+
+
+
+#peakNexusButton {
+		
+	-fx-border-color: grey;
+	-fx-background-color: rgba(255,255,255,0.25);
+	-fx-font-family: "Copperplate Gothic Bold";
+	-fx-font-size: 17pt;
+}
+
+#peakNexusButton:pressed {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
+
+#peakExitButton {
+		
+	-fx-border-color: grey;
+	-fx-background-color: rgba(255,255,255,0.25);
+	-fx-font-family: "Copperplate Gothic Bold";
+	-fx-font-size: 14pt;
+}
+
+#peakExitButton:pressed {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}

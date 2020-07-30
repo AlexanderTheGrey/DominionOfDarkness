@@ -11,9 +11,21 @@
    <children>
       <ImageView fitHeight="1080.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../resources/in_game/graphics/PrimaryGameBackground.jpg" />
+            <Image url="@../resources/in_game/graphics/The%20Nexus.jpg" />
          </image>
       </ImageView>
-      <Button fx:id="closeGameButton" layoutX="1857.0" layoutY="14.0" mnemonicParsing="false" onAction="#closeGameAction" text="EXIT" />
+      <Button fx:id="primaryGameExitButton" layoutX="1816.0" layoutY="14.0" mnemonicParsing="false" onAction="#closeGameAction" prefHeight="33.0" prefWidth="90.0" text="EXIT" />
+      <Button fx:id="inventoryButton" layoutX="55.0" layoutY="78.0" mnemonicParsing="false" onAction="#loadInventory" prefHeight="82.0" prefWidth="239.0" text="Inventory" />
+      <Button fx:id="statsButton" layoutX="55.0" layoutY="248.0" mnemonicParsing="false" onAction="#loadStats" prefHeight="82.0" prefWidth="239.0" text="Stats" />
+      <Button fx:id="peakButton" layoutX="882.0" layoutY="277.0" mnemonicParsing="false" onAction="#loadPeak" text="The Dark Peak" />
+      <Button fx:id="hallButton" layoutX="703.0" layoutY="343.0" mnemonicParsing="false" onAction="#loadHall" text="The Hall of Dol Gazul" />
+      <Button fx:id="woodsButton" layoutX="996.0" layoutY="343.0" mnemonicParsing="false" onAction="#loadWoods" text="Wretched Woods" />
+      <Button fx:id="watchTowerButton" layoutX="640.0" layoutY="401.0" mnemonicParsing="false" onAction="#loadWatchTower" text="Ethereal Watchtower" />
+      <Button fx:id="willowButton" layoutX="1051.0" layoutY="401.0" mnemonicParsing="false" onAction="#loadWillow" text="The Willow of Wispers" />
+      <Button fx:id="cliifssButton" layoutX="659.0" layoutY="472.0" mnemonicParsing="false" onAction="#loadCliffs" text="The Cliffs of Ahm Ytr" />
+      <Button fx:id="cityGravesButton" layoutX="1070.0" layoutY="472.0" mnemonicParsing="false" onAction="#loadCityGraves" text="City of Graves" />
+      <Button fx:id="citySubmergedButton" layoutX="687.0" layoutY="553.0" mnemonicParsing="false" onAction="#loadCitySubmerged" text="Submerged City of Ultar" />
+      <Button fx:id="shipButton" layoutX="1071.0" layoutY="553.0" mnemonicParsing="false" onAction="#loadShip" text="Ship of Ashes" />
+      <Button fx:id="depthsButton" layoutX="897.0" layoutY="619.0" mnemonicParsing="false" onAction="#loadDepths" text="The Depths" />
    </children>
 </AnchorPane>
