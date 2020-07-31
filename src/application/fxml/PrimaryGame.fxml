@@ -22,7 +22,7 @@
       <Button fx:id="woodsButton" layoutX="996.0" layoutY="343.0" mnemonicParsing="false" onAction="#loadWoods" text="Wretched Woods" />
       <Button fx:id="watchTowerButton" layoutX="640.0" layoutY="401.0" mnemonicParsing="false" onAction="#loadWatchTower" text="Ethereal Watchtower" />
       <Button fx:id="willowButton" layoutX="1051.0" layoutY="401.0" mnemonicParsing="false" onAction="#loadWillow" text="The Willow of Wispers" />
-      <Button fx:id="cliifssButton" layoutX="659.0" layoutY="472.0" mnemonicParsing="false" onAction="#loadCliffs" text="The Cliffs of Ahm Ytr" />
+      <Button fx:id="cliffsButton" layoutX="659.0" layoutY="472.0" mnemonicParsing="false" onAction="#loadCliffs" text="The Cliffs of Ahm Ytr" />
       <Button fx:id="cityGravesButton" layoutX="1070.0" layoutY="472.0" mnemonicParsing="false" onAction="#loadCityGraves" text="City of Graves" />
       <Button fx:id="citySubmergedButton" layoutX="687.0" layoutY="553.0" mnemonicParsing="false" onAction="#loadCitySubmerged" text="Submerged City of Ultar" />
       <Button fx:id="shipButton" layoutX="1071.0" layoutY="553.0" mnemonicParsing="false" onAction="#loadShip" text="Ship of Ashes" />
