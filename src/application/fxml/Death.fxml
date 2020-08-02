@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="root" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.DeathController">
+   <children>
+      <ImageView fitHeight="1080.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/in_game/graphics/Reaper%20of%20the%20Abyss.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="deathMainMenuButton" layoutX="800.0" layoutY="407.0" mnemonicParsing="false" onAction="#loadMainMenu" prefHeight="82.0" prefWidth="290.0" text="Main Menu" />
+      <Button fx:id="deathNewGameButton" layoutX="800.0" layoutY="555.0" mnemonicParsing="false" onAction="#loadNewGame" prefHeight="82.0" prefWidth="290.0" text="New Game" />
+      <Button fx:id="deathExitButton" layoutX="1816.0" layoutY="14.0" mnemonicParsing="false" onAction="#closeGameAction" prefHeight="33.0" prefWidth="90.0" text="EXIT" />
+      
+      <Text fx:id="gameOverText" fill="#970202" fontSmoothingType="LCD" layoutX="675.0" layoutY="147.0" opacity="0.8" strokeType="OUTSIDE" strokeWidth="0.0" text="GAME OVER" visible="false">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="32.0" />
+         </font>
+      </Text>
+      <Text fx:id="deathReasonText" fill="#660000" fontSmoothingType="LCD" layoutX="94.0" layoutY="275.0" opacity="0.8" strokeType="OUTSIDE" strokeWidth="0.0" text="The Reaper of the Abyss Has Claimed Your Soul for All Enternity" visible="false">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="32.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

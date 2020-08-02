@@ -547,3 +547,85 @@
     -fx-background-color: black;
     -fx-text-fill: white;
 }
+
+
+
+#inventoryNexusButton {
+		
+	-fx-border-color: grey;
+	-fx-background-color: rgba(255,255,255,0.25);
+	-fx-font-family: "Copperplate Gothic Bold";
+	-fx-font-size: 17pt;
+}
+
+#inventoryNexusButton:pressed {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
+
+#inventoryExitButton {
+		
+	-fx-border-color: grey;
+	-fx-background-color: rgba(255,255,255,0.25);
+	-fx-font-family: "Copperplate Gothic Bold";
+	-fx-font-size: 14pt;
+}
+
+#inventoryExitButton:pressed {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
+
+
+
+
+#deathMainMenuButton {
+		
+	-fx-border-color: grey;
+	-fx-background-color: rgba(255,255,255,0.25);
+	-fx-font-family: "Copperplate Gothic Bold";
+	-fx-font-size: 2em;
+}
+
+#deathMainMenuButton:pressed {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
+
+#deathNewGameButton {
+		
+	-fx-border-color: grey;
+	-fx-background-color: rgba(255,255,255,0.25);
+	-fx-font-family: "Copperplate Gothic Bold";
+	-fx-font-size: 2em;
+}
+
+#deathNewGameButton:pressed {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
+
+#deathExitButton {
+		
+	-fx-border-color: grey;
+	-fx-background-color: rgba(255,255,255,0.25);
+	-fx-font-family: "Copperplate Gothic Bold";
+	-fx-font-size: 2em;
+}
+
+#deathExitButton:pressed {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
+
+
+
+
+
+#gameOverText {
+	-fx-font-size: 60pt;
+}
+
+#deathReasonText {
+	-fx-font-size: 35pt;
+}

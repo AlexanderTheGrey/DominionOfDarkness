@@ -9,12 +9,25 @@
 
 <AnchorPane fx:id="root" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.WillowController">
    <children>
-      <ImageView fitHeight="1080.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="willowBackground" fitHeight="1080.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../resources/in_game/graphics/The%20Willow%20of%20Wispers.jpg" />
          </image>
       </ImageView>
-      <Button fx:id="willowNexusButton" layoutX="43.0" layoutY="963.0" mnemonicParsing="false" onAction="#loadNexus" prefHeight="82.0" prefWidth="290.0" text="Back to the Nexus" />
+      <Button fx:id="willowNexusButton" layoutX="233.0" layoutY="984.0" mnemonicParsing="false" onAction="#loadNexus" prefHeight="82.0" prefWidth="290.0" text="Back to the Nexus" />
       <Button fx:id="willowExitButton" layoutX="1816.0" layoutY="14.0" mnemonicParsing="false" onAction="#closeGameAction" prefHeight="33.0" prefWidth="90.0" text="EXIT" />
+      <ImageView fitHeight="230.0" fitWidth="236.0" layoutY="850.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../resources/in_game/graphics/navigation/Compass.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="northButton" layoutX="102.0" layoutY="863.0" mnemonicParsing="false" onAction="#goNorth" opacity="0.0" prefHeight="94.0" prefWidth="28.0" />
+      <Button fx:id="southButton" layoutX="102.0" layoutY="972.0" mnemonicParsing="false" onAction="#goSouth" opacity="0.0" prefHeight="94.0" prefWidth="28.0" />
+      <Button fx:id="eastButton" layoutX="130.0" layoutY="953.0" mnemonicParsing="false" onAction="#goEast" opacity="0.0" prefHeight="25.0" prefWidth="84.0" />
+      <Button fx:id="westButton" layoutX="18.0" layoutY="953.0" mnemonicParsing="false" onAction="#goWest" opacity="0.0" prefHeight="25.0" prefWidth="84.0" />
+      <Button fx:id="northEastButton" layoutX="136.0" layoutY="922.0" mnemonicParsing="false" onAction="#goNorthEast" opacity="0.0" prefHeight="25.0" prefWidth="22.0" />
+      <Button fx:id="northWestButton" layoutX="74.0" layoutY="922.0" mnemonicParsing="false" onAction="#goNorthWest" opacity="0.0" prefHeight="25.0" prefWidth="22.0" />
+      <Button fx:id="southEastButton" layoutX="136.0" layoutY="984.0" mnemonicParsing="false" onAction="#goSouthEast" opacity="0.0" prefHeight="25.0" prefWidth="22.0" />
+      <Button fx:id="southWestButton" layoutX="74.0" layoutY="984.0" mnemonicParsing="false" onAction="#goSouthWest" opacity="0.0" prefHeight="25.0" prefWidth="22.0" />
    </children>
 </AnchorPane>

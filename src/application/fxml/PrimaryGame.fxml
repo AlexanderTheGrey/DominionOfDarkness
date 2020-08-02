@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
@@ -15,8 +16,8 @@
          </image>
       </ImageView>
       <Button fx:id="primaryGameExitButton" layoutX="1816.0" layoutY="14.0" mnemonicParsing="false" onAction="#closeGameAction" prefHeight="33.0" prefWidth="90.0" text="EXIT" />
-      <Button fx:id="inventoryButton" layoutX="55.0" layoutY="78.0" mnemonicParsing="false" onAction="#loadInventory" prefHeight="82.0" prefWidth="239.0" text="Inventory" />
-      <Button fx:id="statsButton" layoutX="55.0" layoutY="248.0" mnemonicParsing="false" onAction="#loadStats" prefHeight="82.0" prefWidth="239.0" text="Stats" />
+      <Button fx:id="inventoryButton" layoutX="55.0" layoutY="78.0" mnemonicParsing="false" onAction="#loadInventory" prefHeight="82.0" prefWidth="239.0" text="Inventory" visible="false" />
+      <Button fx:id="statsButton" layoutX="55.0" layoutY="248.0" mnemonicParsing="false" onAction="#loadStats" prefHeight="82.0" prefWidth="239.0" text="Stats" visible="false" />
       <Button fx:id="peakButton" layoutX="882.0" layoutY="277.0" mnemonicParsing="false" onAction="#loadPeak" text="The Dark Peak" />
       <Button fx:id="hallButton" layoutX="703.0" layoutY="343.0" mnemonicParsing="false" onAction="#loadHall" text="The Hall of Dol Gazul" />
       <Button fx:id="woodsButton" layoutX="996.0" layoutY="343.0" mnemonicParsing="false" onAction="#loadWoods" text="Wretched Woods" />
@@ -27,5 +28,15 @@
       <Button fx:id="citySubmergedButton" layoutX="687.0" layoutY="553.0" mnemonicParsing="false" onAction="#loadCitySubmerged" text="Submerged City of Ultar" />
       <Button fx:id="shipButton" layoutX="1071.0" layoutY="553.0" mnemonicParsing="false" onAction="#loadShip" text="Ship of Ashes" />
       <Button fx:id="depthsButton" layoutX="897.0" layoutY="619.0" mnemonicParsing="false" onAction="#loadDepths" text="The Depths" />
+      <Text fx:id="welcomeText1" fill="WHITE" fontSmoothingType="LCD" layoutX="648.0" layoutY="106.0" opacity="0.8" strokeType="OUTSIDE" strokeWidth="0.0" text="You Have Entered the Dark Tower" visible="false">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="32.0" />
+         </font>
+      </Text>
+      <Text fx:id="welcomeText2" fill="WHITE" fontSmoothingType="LCD" layoutX="524.0" layoutY="778.0" opacity="0.8" strokeType="OUTSIDE" strokeWidth="0.0" text="There Is No Telling What Darkness Lies Ahead..." visible="false">
+         <font>
+            <Font name="Copperplate Gothic Bold" size="32.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>

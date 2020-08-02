@@ -4,35 +4,98 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import areas.CliffsAreas;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.media.AudioClip;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
+import model.Model;
 
 public class CliffsController implements Initializable {
 	
 	@FXML AnchorPane root;
 	
 	@FXML private Button cliffsNexusButton;
-
 	@FXML private Button cliffsExitButton;
 	
-	private static MediaPlayer mp;
+	@FXML private Button northButton;
+	@FXML private Button southButton;
+	@FXML private Button eastButton;
+	@FXML private Button westButton;
+	@FXML private Button northEastButton;
+	@FXML private Button northWestButton;
+	@FXML private Button southEastButton;
+	@FXML private Button southWestButton;
+	
+	@FXML private ImageView cliffsBackground;
+			
+	public static MediaPlayer mp;
+	
+	private String path;
+
+	
+	@FXML void goNorth(ActionEvent event) {
+		
+		Model.goNorth(cliffsBackground, cliffsNexusButton);
+	}
 
 
+
+	@FXML void goSouth(ActionEvent event) {
+		
+		Model.goSouth(cliffsBackground, cliffsNexusButton);
+	}
+
+
+
+	@FXML void goEast(ActionEvent event) {
+
+
+	}
+
+
+
+	@FXML void goWest(ActionEvent event) {
+
+
+	}
+
+
+
+	@FXML void goNorthEast(ActionEvent event) {
+
+
+	}
+
+
+
+	@FXML void goNorthWest(ActionEvent event) {
+
+
+	}
+
+
+
+	@FXML void goSouthEast(ActionEvent event) {
+
+
+	}
+
+
+
+
+	@FXML void goSouthWest(ActionEvent event) {
+
+
+	}
 
 	@FXML void loadNexus(ActionEvent event) {
-
-
-		//String path = Main.class.getResource("/application/resources/in_game/sound_effects/Horror Scary Male Demon Talk 01.wav").toString();
-		//AudioClip a = new AudioClip(path);
-		//a.play();
 		
 		mp.stop();
 		mp.dispose();
@@ -58,15 +121,18 @@ public class CliffsController implements Initializable {
 
 	@Override
 	public void initialize(URL url, ResourceBundle resources) {
-		
-		String path = Main.class.getResource("/application/resources/in_game/ambient_music/Cliffs Ambience.m4a").toString();
-		Media musicmedia = new Media(path);
-		mp = new MediaPlayer(musicmedia);
-		
-		int loop = MediaPlayer.INDEFINITE;
-		mp.setCycleCount(loop);
-		
-		mp.play();	
+
+		if(PrimaryGameController.currentArea == CliffsAreas.HOME) {
+
+			path = Main.class.getResource("/application/resources/in_game/ambient_music/Cliffs Ambience.m4a").toString();
+			Media musicmedia = new Media(path);
+			mp = new MediaPlayer(musicmedia);
+
+			int loop = MediaPlayer.INDEFINITE;
+			mp.setCycleCount(loop);
+
+			mp.play();
+		}
 		
 	}
 

@@ -10,10 +10,11 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.media.AudioClip;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
+import model.Model;
 
 public class WillowController implements Initializable {
 	
@@ -23,16 +24,78 @@ public class WillowController implements Initializable {
 
 	@FXML private Button willowExitButton;
 	
-	private static MediaPlayer mp;
+	@FXML private Button northButton;
+	@FXML private Button southButton;
+	@FXML private Button eastButton;
+	@FXML private Button westButton;
+	@FXML private Button northEastButton;
+	@FXML private Button northWestButton;
+	@FXML private Button southEastButton;
+	@FXML private Button southWestButton;
+	
+	@FXML private ImageView willowBackground;
+			
+	public static MediaPlayer mp;
 
+	
+	
+	@FXML void goNorth(ActionEvent event) {
+		
+		Model.goNorth(willowBackground, willowNexusButton);
+	}
+
+
+
+	@FXML void goSouth(ActionEvent event) {
+		
+		Model.goSouth(willowBackground, willowNexusButton);
+	}
+
+
+
+	@FXML void goEast(ActionEvent event) {
+
+
+	}
+
+
+
+	@FXML void goWest(ActionEvent event) {
+
+
+	}
+
+
+
+	@FXML void goNorthEast(ActionEvent event) {
+
+
+	}
+
+
+
+	@FXML void goNorthWest(ActionEvent event) {
+
+
+	}
+
+
+
+	@FXML void goSouthEast(ActionEvent event) {
+
+
+	}
+
+
+
+
+	@FXML void goSouthWest(ActionEvent event) {
+
+
+	}
 
 
 	@FXML void loadNexus(ActionEvent event) {
-
-
-		//String path = Main.class.getResource("/application/resources/in_game/sound_effects/Horror Scary Male Demon Talk 01.wav").toString();
-		//AudioClip a = new AudioClip(path);
-		//a.play();
 		
 		mp.stop();
 		mp.dispose();

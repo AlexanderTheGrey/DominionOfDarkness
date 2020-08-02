@@ -10,10 +10,14 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.media.AudioClip;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
+
+import model.Model;
+
+import areas.DeathAreas;
 
 public class CityGravesController implements Initializable {
 	
@@ -23,16 +27,82 @@ public class CityGravesController implements Initializable {
 
 	@FXML private Button cityGravesExitButton;
 	
-	private static MediaPlayer mp;
+	@FXML private Button northButton;
+	@FXML private Button southButton;
+	@FXML private Button eastButton;
+	@FXML private Button westButton;
+	@FXML private Button northEastButton;
+	@FXML private Button northWestButton;
+	@FXML private Button southEastButton;
+	@FXML private Button southWestButton;
+	
+	@FXML private ImageView cityGravesBackground;
+			
+	public static MediaPlayer mp;
+	
+	@FXML void goNorth(ActionEvent event) {
+		
+		Model.goNorth(cityGravesBackground, cityGravesNexusButton);
+		
+		if (PrimaryGameController.currentArea == DeathAreas.REAPER) {
+						
+			loadDeath();
+		}
+	}
 
 
 
+	@FXML void goSouth(ActionEvent event) {
+		
+		Model.goSouth(cityGravesBackground, cityGravesNexusButton);
+	}
+
+
+
+	@FXML void goEast(ActionEvent event) {
+
+
+	}
+
+
+
+	@FXML void goWest(ActionEvent event) {
+
+
+	}
+
+
+
+	@FXML void goNorthEast(ActionEvent event) {
+
+
+	}
+
+
+
+	@FXML void goNorthWest(ActionEvent event) {
+
+
+	}
+
+
+
+	@FXML void goSouthEast(ActionEvent event) {
+
+
+	}
+
+
+
+
+	@FXML void goSouthWest(ActionEvent event) {
+
+
+	}
+	
+	
+	
 	@FXML void loadNexus(ActionEvent event) {
-
-
-		//String path = Main.class.getResource("/application/resources/in_game/sound_effects/Horror Scary Male Demon Talk 01.wav").toString();
-		//AudioClip a = new AudioClip(path);
-		//a.play();
 		
 		mp.stop();
 		mp.dispose();
@@ -44,6 +114,29 @@ public class CityGravesController implements Initializable {
 			e.printStackTrace();
 		}
 
+	}
+	
+	
+	void loadDeath() {
+		
+		mp.stop();
+		mp.dispose();
+		    	
+    	String path = Main.class.getResource("/application/resources/in_game/sound_effects/Horror Demonic Possession 01.wav").toString();
+		Media musicmedia = new Media(path);
+		DeathController.mp = new MediaPlayer(musicmedia);
+		
+		int loop = MediaPlayer.INDEFINITE;
+		DeathController.mp.setCycleCount(loop);
+
+		DeathController.mp.play();
+    	
+    	try {
+			AnchorPane newGamePane = (AnchorPane)FXMLLoader.load(getClass().getResource("/application/fxml/Death.fxml"));
+			root.getChildren().setAll(newGamePane);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 

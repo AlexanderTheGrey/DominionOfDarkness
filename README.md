@@ -10,8 +10,8 @@ Team Members:
 	Luke Puente
 
 Game Description:
-	Dominion of Darkness is a turn-based RPG set in a dark gothic fantasy environment.
+	Dominion of Darkness is an exploration game set in a Dark Gothic fantasy environment.
 
 Known Bugs: None
 
-Versions: JavaFX using Java jre1.8.0_51 (No Additional Requirements)
+Versions: JavaFX using Java jre1.8.0_261 (No Additional Requirements)
