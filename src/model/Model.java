@@ -1,10 +1,8 @@
 package model;
 
-import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import java.util.concurrent.ThreadLocalRandom;
@@ -13,8 +11,6 @@ import application.*;
 import areas.*;
 
 public class Model {
-
-	@FXML private static AnchorPane root;
 
 	public static void goNorth(ImageView background, Button nexusButton) {
 

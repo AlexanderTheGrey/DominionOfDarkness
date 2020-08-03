@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.3.0">
-  <zoom_level>8</zoom_level>
+  <zoom_level>5</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1136</x>
-      <y>112</y>
-      <w>144</w>
-      <h>80</h>
+      <x>1030</x>
+      <y>65</y>
+      <w>90</w>
+      <h>50</h>
     </coordinates>
     <panel_attributes>*Main*
 --
@@ -20,10 +20,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>752</x>
-      <y>48</y>
-      <w>216</w>
-      <h>104</h>
+      <x>790</x>
+      <y>25</y>
+      <w>135</w>
+      <h>65</h>
     </coordinates>
     <panel_attributes>*LauncherController*
 --
@@ -39,10 +39,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>736</x>
-      <y>224</y>
-      <w>272</w>
-      <h>128</h>
+      <x>780</x>
+      <y>135</y>
+      <w>170</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>*GameMenuController*
 --
@@ -60,16 +60,47 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1064</x>
-      <y>264</y>
-      <w>272</w>
-      <h>80</h>
+      <x>985</x>
+      <y>160</y>
+      <w>170</w>
+      <h>300</h>
     </coordinates>
     <panel_attributes>*PrimaryGameController*
 --
 -root: AnchorPane
+-inventoryButton: Button
+-statsButton: Button
+-peakButton: Button
+-hallButton: Button
+-woodsButton: Button
+-watchTowerButton: Button
+-willowButton: Button
+-cliffsButton: Button
+-cityGravesButton: Button
+-citySubmergedButton: Button
+-shipButton: Button
+-depthsButton: Button
+-primaryGameExitButton: Button
 -closeGameButton: Button
+-welcomeText1: Text
+-welcomeText2: Text
++currentArea: Object
+#loadMusic: boolean
+#firstRun: boolean
+-mp: MediaPlayer
 --
+#loadInventory(event: ActionEvent)
+#loadStats(event: ActionEvent)
+#loadPeak(event: ActionEvent)
+#loadHall(event: ActionEvent)
+#loadWoods(event: ActionEvent)
+#loadWatchTower(event: ActionEvent)
+#loadWillow(event: ActionEvent)
+#loadCliffs(event: ActionEvent)
+#loadCityGraves(event: ActionEvent)
+#loadCitySubmerged(event: ActionEvent)
+#loadShip(event: ActionEvent)
+#loadDepths(event: ActionEvent)
 +initialize(location: URL, resources: ResourceBundle)
 #closeGameAction(event: ActionEvent)</panel_attributes>
     <additional_attributes/>
@@ -77,10 +108,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1296</x>
-      <y>24</y>
-      <w>272</w>
-      <h>64</h>
+      <x>1130</x>
+      <y>10</y>
+      <w>170</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>&lt;&lt;interface&gt;&gt;
 *Initializable*
@@ -93,91 +124,1296 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1168</x>
-      <y>32</y>
-      <w>80</w>
-      <h>32</h>
+      <x>975</x>
+      <y>0</y>
+      <w>110</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>*Application*
---</panel_attributes>
+--
++startPage(primaryStage: Stage)
++main(args: String[])</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>344</x>
-      <y>48</y>
-      <w>80</w>
-      <h>32</h>
+      <x>0</x>
+      <y>15</y>
+      <w>200</w>
+      <h>120</h>
     </coordinates>
     <panel_attributes>*Model*
---</panel_attributes>
+--
++goNorth(background: ImageView, nexusButton: Button)
++goSouth(background: ImageView, nexusButton: Button)
++goEast(background: ImageView, nexusButton: Button)
++goWest(background: ImageView, nexusButton: Button)
++goNorthEast(background: ImageView, nexusButton: Button)
++goNorthWest(background: ImageView, nexusButton: Button)
++goSouthEast(background: ImageView, nexusButton: Button)
++goSouthWest(background: ImageView, nexusButton: Button)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1200</x>
-      <y>56</y>
-      <w>24</w>
-      <h>72</h>
+      <x>1030</x>
+      <y>25</y>
+      <w>50</w>
+      <h>50</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+    <additional_attributes>80.0;80.0;80.0;50.0;10.0;50.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>960</x>
-      <y>88</y>
-      <w>192</w>
-      <h>80</h>
+      <x>920</x>
+      <y>50</y>
+      <w>120</w>
+      <h>45</h>
     </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;120.0;10.0;220.0;80.0</additional_attributes>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;10.0;180.0;10.0;180.0;70.0;220.0;70.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>848</x>
-      <y>144</y>
-      <w>24</w>
-      <h>96</h>
+      <x>850</x>
+      <y>85</y>
+      <w>15</w>
+      <h>60</h>
     </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
+    <panel_attributes>lt=&lt;..</panel_attributes>
     <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1000</x>
-      <y>280</y>
-      <w>80</w>
-      <h>24</h>
+      <x>945</x>
+      <y>170</y>
+      <w>50</w>
+      <h>15</h>
     </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
+    <panel_attributes>lt=&lt;..</panel_attributes>
     <additional_attributes>80.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1000</x>
-      <y>80</y>
-      <w>392</w>
-      <h>168</h>
+      <x>945</x>
+      <y>45</y>
+      <w>200</w>
+      <h>105</h>
     </coordinates>
     <panel_attributes>lt=.&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;190.0;470.0;190.0;470.0;10.0</additional_attributes>
+    <additional_attributes>10.0;190.0;380.0;190.0;380.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1328</x>
-      <y>80</y>
-      <w>144</w>
-      <h>232</h>
+      <x>1140</x>
+      <y>45</y>
+      <w>15</w>
+      <h>125</h>
     </coordinates>
     <panel_attributes>lt=.&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;270.0;160.0;270.0;160.0;10.0</additional_attributes>
+    <additional_attributes>10.0;230.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>790</x>
+      <y>235</y>
+      <w>145</w>
+      <h>65</h>
+    </coordinates>
+    <panel_attributes>*CreditsController*
+--
+-root: AnchorPane
+-creditAlexanderText: Text
+-creditMichaelText: Text
+-creditAndreasText: Text
+-creditLukeText: Text
+--
+#navigateToGamemenu(event: ActionEvent)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>850</x>
+      <y>210</y>
+      <w>15</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=..&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>405</x>
+      <y>1010</y>
+      <w>170</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>*DarkWillowController*
+--
+-root: AnchorPane
+-darkWillowNexusButton: Button
+-darkWillowExitButton: Button
+-northButton: Button
+-southButton: Button
+-eastButton: Button
+-westButton: Button
+-northEastButton: Button
+-northWestButton: Button
+-southEastButton: Button
+-southWestButton: Button
+-darkWillowBackground: ImageView
++mp: MediaPlayer
+--
+
+#goNorth(event: ActionEvent)
+#goSouth(event: ActionEvent)
+#goEast(event: ActionEvent)
+#goWest(event: ActionEvent)
+#goNorthEast(event: ActionEvent)
+#goNorthWest(event: ActionEvent)
+#goSouthEast(event: ActionEvent)
+#goSouthWest(event: ActionEvent)
+#loadNexus(event: ActionEvent)
+#closeGameAction(event: ActionEvent)
++initialize(location: URL, resources: ResourceBundle)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>980</x>
+      <y>540</y>
+      <w>170</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>*CitySubmergedController*
+--
+-root: AnchorPane
+-citySubmergedNexusButton: Button
+-citySubmergedExitButton: Button
+-northButton: Button
+-southButton: Button
+-eastButton: Button
+-westButton: Button
+-northEastButton: Button
+-northWestButton: Button
+-southEastButton: Button
+-southWestButton: Button
+-citySubmergedBackground: ImageView
++mp: MediaPlayer
+--
+
+#goNorth(event: ActionEvent)
+#goSouth(event: ActionEvent)
+#goEast(event: ActionEvent)
+#goWest(event: ActionEvent)
+#goNorthEast(event: ActionEvent)
+#goNorthWest(event: ActionEvent)
+#goSouthEast(event: ActionEvent)
+#goSouthWest(event: ActionEvent)
+#loadNexus(event: ActionEvent)
+#closeGameAction(event: ActionEvent)
++initialize(location: URL, resources: ResourceBundle)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1530</x>
+      <y>540</y>
+      <w>170</w>
+      <h>225</h>
+    </coordinates>
+    <panel_attributes>*CliffsController*
+--
+-root: AnchorPane
+-cliffsNexusButton: Button
+-cliffsExitButton: Button
+-northButton: Button
+-southButton: Button
+-eastButton: Button
+-westButton: Button
+-northEastButton: Button
+-northWestButton: Button
+-southEastButton: Button
+-southWestButton: Button
+-cliffsBackground: ImageView
++mp: MediaPlayer
+-path: String
+--
+
+#goNorth(event: ActionEvent)
+#goSouth(event: ActionEvent)
+#goEast(event: ActionEvent)
+#goWest(event: ActionEvent)
+#goNorthEast(event: ActionEvent)
+#goNorthWest(event: ActionEvent)
+#goSouthEast(event: ActionEvent)
+#goSouthWest(event: ActionEvent)
+#loadNexus(event: ActionEvent)
+#closeGameAction(event: ActionEvent)
++initialize(location: URL, resources: ResourceBundle)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1530</x>
+      <y>1005</y>
+      <w>170</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>*PeakController*
+--
+-root: AnchorPane
+-peakNexusButton: Button
+-peakExitButton: Button
+-northButton: Button
+-southButton: Button
+-eastButton: Button
+-westButton: Button
+-northEastButton: Button
+-northWestButton: Button
+-southEastButton: Button
+-southWestButton: Button
+-peakBackground: ImageView
++mp: MediaPlayer
+--
+
+#goNorth(event: ActionEvent)
+#goSouth(event: ActionEvent)
+#goEast(event: ActionEvent)
+#goWest(event: ActionEvent)
+#goNorthEast(event: ActionEvent)
+#goNorthWest(event: ActionEvent)
+#goSouthEast(event: ActionEvent)
+#goSouthWest(event: ActionEvent)
+#loadNexus(event: ActionEvent)
+#closeGameAction(event: ActionEvent)
++initialize(location: URL, resources: ResourceBundle)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>405</x>
+      <y>545</y>
+      <w>170</w>
+      <h>225</h>
+    </coordinates>
+    <panel_attributes>*CityGravesController*
+--
+-root: AnchorPane
+-cityGravesNexusButton: Button
+-cityGravesExitButton: Button
+-northButton: Button
+-southButton: Button
+-eastButton: Button
+-westButton: Button
+-northEastButton: Button
+-northWestButton: Button
+-southEastButton: Button
+-southWestButton: Button
+-cityGravesBackground: ImageView
++mp: MediaPlayer
+--
+
+#goNorth(event: ActionEvent)
+#goSouth(event: ActionEvent)
+#goEast(event: ActionEvent)
+#goWest(event: ActionEvent)
+#goNorthEast(event: ActionEvent)
+#goNorthWest(event: ActionEvent)
+#goSouthEast(event: ActionEvent)
+#goSouthWest(event: ActionEvent)
+#loadNexus(event: ActionEvent)
+#loadDeath(event: ActionEvent)
+#closeGameAction(event: ActionEvent)
++initialize(location: URL, resources: ResourceBundle)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>980</x>
+      <y>770</y>
+      <w>170</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>*HallController*
+--
+-root: AnchorPane
+-hallNexusButton: Button
+-hallExitButton: Button
+-northButton: Button
+-southButton: Button
+-eastButton: Button
+-westButton: Button
+-northEastButton: Button
+-northWestButton: Button
+-southEastButton: Button
+-southWestButton: Button
+-hallBackground: ImageView
++mp: MediaPlayer
+--
+
+#goNorth(event: ActionEvent)
+#goSouth(event: ActionEvent)
+#goEast(event: ActionEvent)
+#goWest(event: ActionEvent)
+#goNorthEast(event: ActionEvent)
+#goNorthWest(event: ActionEvent)
+#goSouthEast(event: ActionEvent)
+#goSouthWest(event: ActionEvent)
+#loadNexus(event: ActionEvent)
+#closeGameAction(event: ActionEvent)
++initialize(location: URL, resources: ResourceBundle)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1530</x>
+      <y>775</y>
+      <w>170</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>*DepthsController*
+--
+-root: AnchorPane
+-depthsNexusButton: Button
+-depthsExitButton: Button
+-northButton: Button
+-southButton: Button
+-eastButton: Button
+-westButton: Button
+-northEastButton: Button
+-northWestButton: Button
+-southEastButton: Button
+-southWestButton: Button
+-depthsBackground: ImageView
++mp: MediaPlayer
+--
+
+#goNorth(event: ActionEvent)
+#goSouth(event: ActionEvent)
+#goEast(event: ActionEvent)
+#goWest(event: ActionEvent)
+#goNorthEast(event: ActionEvent)
+#goNorthWest(event: ActionEvent)
+#goSouthEast(event: ActionEvent)
+#goSouthWest(event: ActionEvent)
+#loadNexus(event: ActionEvent)
+#closeGameAction(event: ActionEvent)
++initialize(location: URL, resources: ResourceBundle)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>980</x>
+      <y>1000</y>
+      <w>170</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>*ShipController*
+--
+-root: AnchorPane
+-shipNexusButton: Button
+-shipExitButton: Button
+-northButton: Button
+-southButton: Button
+-eastButton: Button
+-westButton: Button
+-northEastButton: Button
+-northWestButton: Button
+-southEastButton: Button
+-southWestButton: Button
+-shipBackground: ImageView
++mp: MediaPlayer
+--
+
+#goNorth(event: ActionEvent)
+#goSouth(event: ActionEvent)
+#goEast(event: ActionEvent)
+#goWest(event: ActionEvent)
+#goNorthEast(event: ActionEvent)
+#goNorthWest(event: ActionEvent)
+#goSouthEast(event: ActionEvent)
+#goSouthWest(event: ActionEvent)
+#loadNexus(event: ActionEvent)
+#closeGameAction(event: ActionEvent)
++initialize(location: URL, resources: ResourceBundle)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>405</x>
+      <y>1240</y>
+      <w>170</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>*WatchTowerController*
+--
+-root: AnchorPane
+-watchTowerNexusButton: Button
+-watchTowerExitButton: Button
+-northButton: Button
+-southButton: Button
+-eastButton: Button
+-westButton: Button
+-northEastButton: Button
+-northWestButton: Button
+-southEastButton: Button
+-southWestButton: Button
+-watchTowerBackground: ImageView
++mp: MediaPlayer
+--
+
+#goNorth(event: ActionEvent)
+#goSouth(event: ActionEvent)
+#goEast(event: ActionEvent)
+#goWest(event: ActionEvent)
+#goNorthEast(event: ActionEvent)
+#goNorthWest(event: ActionEvent)
+#goSouthEast(event: ActionEvent)
+#goSouthWest(event: ActionEvent)
+#loadNexus(event: ActionEvent)
+#closeGameAction(event: ActionEvent)
++initialize(location: URL, resources: ResourceBundle)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>405</x>
+      <y>780</y>
+      <w>170</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>*WillowController*
+--
+-root: AnchorPane
+-willowNexusButton: Button
+-willowExitButton: Button
+-northButton: Button
+-southButton: Button
+-eastButton: Button
+-westButton: Button
+-northEastButton: Button
+-northWestButton: Button
+-southEastButton: Button
+-southWestButton: Button
+-willowBackground: ImageView
++mp: MediaPlayer
+--
+
+#goNorth(event: ActionEvent)
+#goSouth(event: ActionEvent)
+#goEast(event: ActionEvent)
+#goWest(event: ActionEvent)
+#goNorthEast(event: ActionEvent)
+#goNorthWest(event: ActionEvent)
+#goSouthEast(event: ActionEvent)
+#goSouthWest(event: ActionEvent)
+#loadNexus(event: ActionEvent)
+#closeGameAction(event: ActionEvent)
++initialize(location: URL, resources: ResourceBundle)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>980</x>
+      <y>1230</y>
+      <w>170</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>*WoodsController*
+--
+-root: AnchorPane
+-woodsNexusButton: Button
+-woodsExitButton: Button
+-northButton: Button
+-southButton: Button
+-eastButton: Button
+-westButton: Button
+-northEastButton: Button
+-northWestButton: Button
+-southEastButton: Button
+-southWestButton: Button
+-woodsBackground: ImageView
++mp: MediaPlayer
+--
+
+#goNorth(event: ActionEvent)
+#goSouth(event: ActionEvent)
+#goEast(event: ActionEvent)
+#goWest(event: ActionEvent)
+#goNorthEast(event: ActionEvent)
+#goNorthWest(event: ActionEvent)
+#goSouthEast(event: ActionEvent)
+#goSouthWest(event: ActionEvent)
+#loadNexus(event: ActionEvent)
+#closeGameAction(event: ActionEvent)
++initialize(location: URL, resources: ResourceBundle)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1195</x>
+      <y>190</y>
+      <w>170</w>
+      <h>65</h>
+    </coordinates>
+    <panel_attributes>*InventoryController*
+--
+-root: AnchorPane
+-inventoryNexusButton: Button
+-inventoryExitButton: Button
+--
+#loadNexus(event: ActionEvent)
+#closeGameAction(event: ActionEvent)
++initialize(location: URL, resources: ResourceBundle)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>690</y>
+      <w>170</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>*DeathController*
+--
+-root: AnchorPane
+-deathMainMenuButton: Button
+-deathNewGameButton: Button
+-deathExitButton: Button
+-gameOverText: Text
+-deathReasonText: Text
++mp: MediaPlayer
+--
+#loadMainMenu(event: ActionEvent)
+#loadNewGame(event: ActionEvent)
+#closeGameAction(event: ActionEvent)
++initialize(location: URL, resources: ResourceBundle)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>165</y>
+      <w>60</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+*CityGravesAreas*
+--
+HOME
+INNERCITY
+OVERGROWN
+OUTERCITY
+MANSION</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>270</y>
+      <w>50</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+*CliffsAreas*
+--
+HOME
+CATHEDRAL
+GRAVEYARD</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>645</y>
+      <w>50</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+*DeathAreas*
+--
+REAPER</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>445</y>
+      <w>50</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+*HallAreas*
+--
+HOME</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>525</y>
+      <w>50</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+*ShipAreas*
+--
+HOME</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>230</y>
+      <w>75</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+*CitySubmergedAreas*
+--
+HOME</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>365</y>
+      <w>60</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+*DarkWillowAreas*
+--
+HOME</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>405</y>
+      <w>55</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+*DepthsAreas*
+--
+HOME</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>485</y>
+      <w>50</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+*PeakAreas*
+--
+HOME</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>565</y>
+      <w>65</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+*WatchTowerAreas*
+--
+HOME</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>325</y>
+      <w>50</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+*WillowAreas*
+--
+HOME</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>605</y>
+      <w>50</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+*WoodsAreas*
+--
+HOME</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>175</x>
+      <y>515</y>
+      <w>265</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>510.0;60.0;510.0;10.0;50.0;10.0;50.0;360.0;10.0;360.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>45</x>
+      <y>650</y>
+      <w>50</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0;80.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>55</x>
+      <y>170</y>
+      <w>420</w>
+      <h>385</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;10.0;280.0;10.0;290.0;610.0;820.0;610.0;820.0;750.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>55</x>
+      <y>130</y>
+      <w>25</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;120.0;30.0;120.0;30.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>70</x>
+      <y>130</y>
+      <w>25</w>
+      <h>125</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;230.0;30.0;230.0;30.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>45</x>
+      <y>130</y>
+      <w>60</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;340.0;100.0;340.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>45</x>
+      <y>130</y>
+      <w>70</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;420.0;120.0;420.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>55</x>
+      <y>130</y>
+      <w>70</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;500.0;120.0;500.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>50</x>
+      <y>130</y>
+      <w>85</w>
+      <h>300</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;580.0;150.0;580.0;150.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>45</x>
+      <y>130</y>
+      <w>100</w>
+      <h>340</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;660.0;180.0;660.0;180.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>45</x>
+      <y>130</y>
+      <w>110</w>
+      <h>380</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;740.0;200.0;740.0;200.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>45</x>
+      <y>130</y>
+      <w>120</w>
+      <h>420</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;820.0;220.0;820.0;220.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>60</x>
+      <y>130</y>
+      <w>120</w>
+      <h>455</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;890.0;220.0;890.0;210.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>45</x>
+      <y>130</y>
+      <w>145</w>
+      <h>500</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;980.0;270.0;980.0;260.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1150</x>
+      <y>215</y>
+      <w>55</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=..&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>485</x>
+      <y>45</y>
+      <w>685</w>
+      <h>510</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>1340.0;10.0;1350.0;850.0;10.0;850.0;10.0;1000.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>570</x>
+      <y>45</y>
+      <w>610</w>
+      <h>750</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>1190.0;10.0;1200.0;900.0;40.0;900.0;40.0;1480.0;10.0;1480.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>570</x>
+      <y>45</y>
+      <w>620</w>
+      <h>980</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>1210.0;10.0;1220.0;930.0;80.0;930.0;70.0;1940.0;10.0;1940.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>570</x>
+      <y>45</y>
+      <w>630</w>
+      <h>1210</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>1230.0;10.0;1240.0;960.0;110.0;960.0;110.0;2400.0;10.0;2400.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1145</x>
+      <y>45</y>
+      <w>240</w>
+      <h>510</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>100.0;10.0;100.0;250.0;450.0;250.0;460.0;1000.0;10.0;1000.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1145</x>
+      <y>45</y>
+      <w>260</w>
+      <h>740</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>120.0;10.0;120.0;230.0;480.0;230.0;500.0;1460.0;10.0;1460.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1145</x>
+      <y>45</y>
+      <w>280</w>
+      <h>970</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>140.0;10.0;140.0;210.0;510.0;210.0;540.0;1920.0;10.0;1920.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1145</x>
+      <y>45</y>
+      <w>295</w>
+      <h>1200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>160.0;10.0;160.0;190.0;530.0;190.0;570.0;2380.0;10.0;2380.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1230</x>
+      <y>45</y>
+      <w>495</w>
+      <h>510</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;170.0;960.0;170.0;970.0;1000.0;940.0;1000.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1240</x>
+      <y>45</y>
+      <w>505</w>
+      <h>745</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;150.0;970.0;150.0;990.0;1470.0;920.0;1470.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1250</x>
+      <y>45</y>
+      <w>515</w>
+      <h>975</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0;980.0;130.0;1010.0;1930.0;900.0;1930.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>570</x>
+      <y>300</y>
+      <w>425</w>
+      <h>340</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;660.0;250.0;660.0;250.0;10.0;830.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>570</x>
+      <y>305</y>
+      <w>425</w>
+      <h>570</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;1120.0;280.0;1120.0;280.0;10.0;830.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>570</x>
+      <y>310</y>
+      <w>425</w>
+      <h>795</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;1570.0;320.0;1570.0;320.0;10.0;830.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>570</x>
+      <y>315</y>
+      <w>425</w>
+      <h>1020</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;2020.0;360.0;2020.0;360.0;10.0;830.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>760</x>
+      <y>320</y>
+      <w>235</w>
+      <h>925</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>440.0;1830.0;10.0;1830.0;10.0;10.0;450.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>775</x>
+      <y>325</y>
+      <w>220</w>
+      <h>690</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>410.0;1360.0;10.0;1360.0;10.0;10.0;420.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>790</x>
+      <y>330</y>
+      <w>205</w>
+      <h>455</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>380.0;890.0;10.0;890.0;10.0;10.0;390.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>805</x>
+      <y>335</y>
+      <w>190</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>350.0;420.0;10.0;420.0;10.0;10.0;360.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1150</x>
+      <y>255</y>
+      <w>390</w>
+      <h>300</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>760.0;580.0;720.0;580.0;710.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1150</x>
+      <y>260</y>
+      <w>390</w>
+      <h>530</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>760.0;1040.0;710.0;1040.0;690.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1150</x>
+      <y>265</y>
+      <w>390</w>
+      <h>755</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>760.0;1490.0;700.0;1490.0;670.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>195</x>
+      <y>95</y>
+      <w>220</w>
+      <h>465</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;10.0;380.0;10.0;390.0;910.0;420.0;910.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>195</x>
+      <y>105</y>
+      <w>220</w>
+      <h>690</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;10.0;350.0;10.0;360.0;1360.0;420.0;1360.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>195</x>
+      <y>115</y>
+      <w>220</w>
+      <h>910</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;10.0;320.0;10.0;330.0;1800.0;420.0;1800.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>195</x>
+      <y>125</y>
+      <w>220</w>
+      <h>1130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;10.0;280.0;10.0;290.0;2240.0;420.0;2240.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>195</x>
+      <y>55</y>
+      <w>870</w>
+      <h>495</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;10.0;600.0;10.0;610.0;380.0;660.0;380.0;930.0;850.0;1420.0;770.0;1720.0;970.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>195</x>
+      <y>65</y>
+      <w>870</w>
+      <h>715</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;10.0;550.0;10.0;550.0;390.0;630.0;390.0;890.0;860.0;1410.0;1400.0;1720.0;1400.0;1720.0;1410.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>195</x>
+      <y>75</y>
+      <w>875</w>
+      <h>935</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;10.0;510.0;10.0;510.0;410.0;590.0;410.0;1390.0;1840.0;1730.0;1840.0;1730.0;1850.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>195</x>
+      <y>85</y>
+      <w>880</w>
+      <h>1155</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;10.0;480.0;10.0;480.0;430.0;560.0;430.0;820.0;920.0;1400.0;2280.0;1740.0;2280.0;1740.0;2290.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>195</x>
+      <y>45</y>
+      <w>1345</w>
+      <h>1150</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;10.0;640.0;10.0;650.0;370.0;690.0;370.0;960.0;840.0;1420.0;770.0;1610.0;890.0;2040.0;870.0;2670.0;2280.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>195</x>
+      <y>35</y>
+      <w>1345</w>
+      <h>930</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;10.0;670.0;10.0;680.0;370.0;720.0;370.0;980.0;830.0;1420.0;770.0;1620.0;900.0;2050.0;880.0;2670.0;1840.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>195</x>
+      <y>25</y>
+      <w>1345</w>
+      <h>710</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;10.0;700.0;10.0;710.0;370.0;750.0;370.0;1000.0;820.0;1420.0;770.0;1630.0;910.0;2060.0;890.0;2670.0;1400.0</additional_attributes>
   </element>
 </diagram>
