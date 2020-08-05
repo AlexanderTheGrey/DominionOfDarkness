@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
@@ -29,5 +30,16 @@
       <Button fx:id="northWestButton" layoutX="74.0" layoutY="922.0" mnemonicParsing="false" onAction="#goNorthWest" opacity="0.0" prefHeight="25.0" prefWidth="22.0" />
       <Button fx:id="southEastButton" layoutX="136.0" layoutY="984.0" mnemonicParsing="false" onAction="#goSouthEast" opacity="0.0" prefHeight="25.0" prefWidth="22.0" />
       <Button fx:id="southWestButton" layoutX="74.0" layoutY="984.0" mnemonicParsing="false" onAction="#goSouthWest" opacity="0.0" prefHeight="25.0" prefWidth="22.0" />
+      <Button fx:id="tile22" layoutX="900.0" layoutY="490.0" mnemonicParsing="false" onAction="#tileButton" prefHeight="100.0" prefWidth="100.0" text="σ" />
+      <Button fx:id="tile32" layoutX="1040.0" layoutY="490.0" mnemonicParsing="false" onAction="#tileButton" prefHeight="100.0" prefWidth="100.0" text="μ" />
+      <Button fx:id="tile21" layoutX="900.0" layoutY="350.0" mnemonicParsing="false" onAction="#tileButton" prefHeight="100.0" prefWidth="100.0" text="π" />
+      <Button fx:id="tile23" layoutX="900.0" layoutY="630.0" mnemonicParsing="false" onAction="#tileButton" prefHeight="100.0" prefWidth="100.0" text="ƒ" />
+      <Button fx:id="tile12" layoutX="760.0" layoutY="490.0" mnemonicParsing="false" onAction="#tileButton" prefHeight="100.0" prefWidth="100.0" text="§" />
+      <Button fx:id="tile13" layoutX="760.0" layoutY="630.0" mnemonicParsing="false" onAction="#tileButton" prefHeight="100.0" prefWidth="100.0" text="ρ" />
+      <Button fx:id="tile33" layoutX="1040.0" layoutY="630.0" mnemonicParsing="false" onAction="#tileButton" prefHeight="100.0" prefWidth="100.0" text="φ" />
+      <Button fx:id="tile11" layoutX="760.0" layoutY="350.0" mnemonicParsing="false" onAction="#tileButton" prefHeight="100.0" prefWidth="100.0" text="θ" />
+      <Button fx:id="tile31" layoutX="1040.0" layoutY="350.0" mnemonicParsing="false" onAction="#tileButton" prefHeight="100.0" prefWidth="100.0" text="ω" />
+      <Button fx:id="peakPuzzleButton" layoutX="784.0" layoutY="258.0" mnemonicParsing="false" onAction="#startPuzzleButton" prefHeight="55.0" prefWidth="333.0" text="Examine Puzzle Wall" />
+      <Label fx:id="peakMessage" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="626.0" layoutY="850.0" prefHeight="69.0" prefWidth="669.0" text="There appears to be a mysterious puzzle on the wall." />
    </children>
 </AnchorPane>
