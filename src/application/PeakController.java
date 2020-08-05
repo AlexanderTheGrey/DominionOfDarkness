@@ -55,7 +55,10 @@ public class PeakController implements Initializable {
 	
 	public static ArrayList<Integer> solution = new ArrayList<Integer>();
 	public static ArrayList<Integer> rows = new ArrayList<Integer>();
+	public static ArrayList<Button> tileList = new ArrayList<Button>();
 	
+	
+	// Tile pressed is interpreted by the XY value
 	public static String choice;
 	public static int spaceX;
 	public static int spaceY;
@@ -83,81 +86,76 @@ public class PeakController implements Initializable {
 		Model.goSouth(peakBackground, peakNexusButton);
 	}
 
-
+	/** Unused compass functions **/
 
 	@FXML void goEast(ActionEvent event) {
 	}
 
-
-
 	@FXML void goWest(ActionEvent event) {
 	}
-
-
 
 	@FXML void goNorthEast(ActionEvent event) {
 	}
 
-
-
 	@FXML void goNorthWest(ActionEvent event) {
 	}
 
-
-
 	@FXML void goSouthEast(ActionEvent event) {
 	}
-
-
-
 
 	@FXML void goSouthWest(ActionEvent event) {
 	}
 
 	
 	
+	/**** Implement puzzle game ****/
 	
-	/** Implement puzzle game **/
-	
-	public void updateTiles () {
-		tile11.setText(rows.get(0).toString());
-		tile21.setText(rows.get(1).toString());
-		tile31.setText(rows.get(2).toString());
-		tile12.setText(rows.get(3).toString());
-		tile22.setText(rows.get(4).toString());
-		tile32.setText(rows.get(5).toString());
-		tile13.setText(rows.get(6).toString());
-		tile23.setText(rows.get(7).toString());
-		tile33.setText(rows.get(8).toString());
-		
-			
+	// Create a list of buttons for easy iteration
+	public void fillButtonList (ArrayList<Button> list) {
+		list.add(tile11);
+		list.add(tile21);
+		list.add(tile31);
+		list.add(tile12);
+		list.add(tile22);
+		list.add(tile32);
+		list.add(tile13);
+		list.add(tile23);
+		list.add(tile33);
 	}
 	
+	// Disables tile buttons
 	public void lockTileButtons(boolean b) {
-		tile11.setDisable(b);
-		tile21.setDisable(b);
-		tile31.setDisable(b);
-		tile12.setDisable(b);
-		tile22.setDisable(b);
-		tile32.setDisable(b);
-		tile13.setDisable(b);
-		tile23.setDisable(b);
-		tile33.setDisable(b);
+		for(int i = 0; i < tileList.size(); i++) {
+			tileList.get(i).setDisable(b);
+		}
 	}
 	
 	// Projects the numbers to the tiles
-	public void buildBoard() {
-		tile11.setText(rows.get(0).toString());
-		tile21.setText(rows.get(1).toString());
-		tile31.setText(rows.get(2).toString());
-		tile12.setText(rows.get(3).toString());
-		tile22.setText(rows.get(4).toString());
-		tile32.setText(rows.get(5).toString());
-		tile13.setText(rows.get(6).toString());
-		tile23.setText(rows.get(7).toString());
-		tile33.setText(rows.get(8).toString());
-	}
+	public void updateTiles() {
+		// Iterate through tileList ( button list )
+		for(int i = 0; i < tileList.size(); i++) {
+			tileList.get(i).setText(rows.get(i).toString()); // Update tile number
+			
+			// Make tile "0" invisible ( so it acts as the "space" )
+			if(Integer.parseInt(tileList.get(i).getText()) == 0)
+				tileList.get(i).setVisible(false);
+			else
+				tileList.get(i).setVisible(true);
+		}
+		
+		// Check if puzzle has been solved after each move
+		if(Puzzle8Model.checkSolution(rows, solution)) {
+			peakMessage.setText(Puzzle8Model.successMessage());
+			hasBeenSolved = true;
+			
+			tileList.get(8).setText("9"); // monogram for PLuto ( Astrology easter egg for the former ninth planet )
+			tileList.get(8).setVisible(true);
+					
+			lockTileButtons(true);
+		}
+	} // END of updateTiles()
 	
+	/** When puzzle is started, setup board **/
 	@FXML void startPuzzleButton(ActionEvent event) {
 		solution.clear();
 		rows.clear();
@@ -170,79 +168,70 @@ public class PeakController implements Initializable {
 		while(!Puzzle8Model.isSolvable(rows))
 			rows = Puzzle8Model.shuffleTiles(rows);
 		
-		buildBoard();
+		updateTiles();
 		
 		lockTileButtons(false);
 		
 		peakMessage.setText("Perhaps the tiles can be shifted.");
 		
 		peakPuzzleButton.setVisible(false);
-	}
+	} // end of startPuzzleButton(event)
 	
 	
-	// When tile button is pressed
+	/** When tile button is pressed **/
 	@FXML void tileButton(ActionEvent event) {
-		Integer temp;
+		Integer temp;	 // set up swap variable ( for tile swapping )
+		Integer tileNum; // actual number displayed on tile
+		
 		Button btn = (Button) event.getSource();
 		String id = btn.getId();
-		Integer tileNum = Integer.parseInt(btn.getText());
-		
 		Pattern p = Pattern.compile("\\d{2}");
-		Matcher m = p.matcher(id);
+		
+		Matcher m = p.matcher(id); // match "XY" in string "tileXY"
 		if(m.find())
 			choice = m.group(0); // get tile coordinates
 		
-		spaceX = ((rows.indexOf(0)%3)+1); // gets column of 0
-		spaceY = ((rows.indexOf(0)+3)/3); // gets row of 0
+		tileNum = Integer.parseInt(btn.getText()); // get actual number displayed on tile
+		
+		spaceX = ((rows.indexOf(0)%3)+1); // gets column of space
+		spaceY = ((rows.indexOf(0)+3)/3); // gets row of space
 		
 		choiceX = choice.charAt(0)-48; // gets column of button
 		choiceY = choice.charAt(1)-48; // gets row of button
 		
-			
 		peakMessage.setText(Puzzle8Model.successMessage());
 		
+		// Swap tiles if valid move
 		if(!Puzzle8Model.isValidMove(rows, spaceX, spaceY, choiceX, choiceY)) {
 			peakMessage.setText("\t[ " + tileNum + " ] appears to be immovable.\t");
 		} else {
-			// Shift column
+			// Shift Column
 			if(spaceX == choiceX) {
 				// Swap if neighboring tiles
 				temp = rows.indexOf(0);				
 				rows.set(rows.indexOf(tileNum), 0);
 				rows.set(temp, tileNum);
 			}
-			// Shift row
+			// Shift Row
 			else if (spaceY == choiceY) {
 				// Swap if neighboring tiles
 				temp = rows.indexOf(0);
 				rows.set(rows.indexOf(tileNum), 0);
 				rows.set(temp, tileNum);
-			}
+			} 
 			peakMessage.setText("\tThe passage remains locked.\t");
-		}
+		} // end of valid move
 		
-		// Update board
-		updateTiles();
-		
-		
-		
-		if(Puzzle8Model.checkSolution(rows, solution)) {
-			peakMessage.setText(Puzzle8Model.successMessage());
-			hasBeenSolved = true;
-			
-			buildBoard();
-			
-			// Lock puzzle if already completed
-			lockTileButtons(true);
-		}
-	} // end of tileButton(event)
+		updateTiles(); // Update tiles after swap
+		 
+	} // end of tileButton(event)	
+	
+	/**** END of puzzle game implementation ****/
 
 	
 	
-	
-	/** End of puzzle game implementation **/
-
-	@FXML void loadNexus(ActionEvent event) {
+	@FXML
+	void loadNexus(ActionEvent event) {
 
 		mp.stop();
 		mp.dispose();
@@ -256,12 +245,9 @@ public class PeakController implements Initializable {
 
 	}
 
-
-
 	@FXML
 	void closeGameAction(ActionEvent event) {
-
-		Platform.exit();
+		Platform.exit(); // exit game
 	}
 
 
@@ -270,17 +256,21 @@ public class PeakController implements Initializable {
 	public void initialize(URL url, ResourceBundle resources) {
 		
 		/** Initiate puzzle **/
+		tileList.clear(); // reset button list
+		fillButtonList(tileList); // fill button list
 		lockTileButtons(true);
 		
-		// Disable start if puzzle already completed
+		// Disable start button if puzzle already completed
 		if(hasBeenSolved) {
 			peakPuzzleButton.setVisible(false);
 			peakMessage.setText("The passage is open.");
-			buildBoard();
+			updateTiles();
+			//tileList.
 		}
-
+		/** END of initiate puzzle **/
 		
 		
+		/** Play media **/
 		String path1 = Main.class.getResource("/application/resources/in_game/ambient_music/Peak Ambience.m4a").toString();
 		Media musicmedia = new Media(path1);
 		mp = new MediaPlayer(musicmedia);
@@ -289,7 +279,7 @@ public class PeakController implements Initializable {
 		mp.setCycleCount(loop);
 		
 		mp.play();	
-		
+		/** END of play media **/
 	}
 
 }
