@@ -88,6 +88,112 @@
 	-fx-font-family: "Copperplate Gothic Bold";
 }
 
+
+
+
+
+#peakPuzzleButton {
+		
+	-fx-border-color: grey;
+	-fx-background-color: rgba(255,255,255,0.50);
+	-fx-font-family: "Copperplate Gothic Bold";
+	-fx-font-size: 14pt;
+}
+
+#peakMessage {
+		
+	-fx-font-family: "Copperplate Gothic Bold";
+	-fx-font-size: 12pt;
+	-fx-text-fill: white;
+}
+
+#tileBlank {
+		
+	-fx-border-color: grey;
+	-fx-background-color: rgba(255,255,255,0.50);
+	-fx-font-family: "Copperplate Gothic Bold";
+	-fx-font-size: 0pt;
+}
+
+
+/* Row 1 */
+#tile11 {
+		
+	-fx-border-color: grey;
+	-fx-background-color: rgba(255,255,255,0.50);
+	-fx-font-family: "Copperplate Gothic Bold";
+	-fx-font-size: 36pt;
+}
+
+#tile21 {
+		
+	-fx-border-color: grey;
+	-fx-background-color: rgba(255,255,255,0.50);
+	-fx-font-family: "Copperplate Gothic Bold";
+	-fx-font-size: 36pt;
+}
+
+#tile31 {
+		
+	-fx-border-color: grey;
+	-fx-background-color: rgba(255,255,255,0.50);
+	-fx-font-family: "Copperplate Gothic Bold";
+	-fx-font-size: 36pt;
+}
+
+/* Row 2 */
+#tile12 {
+		
+	-fx-border-color: grey;
+	-fx-background-color: rgba(255,255,255,0.50);
+	-fx-font-family: "Copperplate Gothic Bold";
+	-fx-font-size: 36pt;
+}
+
+#tile22 {
+		
+	-fx-border-color: grey;
+	-fx-background-color: rgba(255,255,255,0.50);
+	-fx-font-family: "Copperplate Gothic Bold";
+	-fx-font-size: 36pt;
+}
+
+#tile32 {
+		
+	-fx-border-color: grey;
+	-fx-background-color: rgba(255,255,255,0.50);
+	-fx-font-family: "Copperplate Gothic Bold";
+	-fx-font-size: 36pt;
+}
+
+/* Row 3 */
+#tile13 {
+		
+	-fx-border-color: grey;
+	-fx-background-color: rgba(255,255,255,0.50);
+	-fx-font-family: "Copperplate Gothic Bold";
+	-fx-font-size: 36pt;
+}
+
+#tile23 {
+		
+	-fx-border-color: grey;
+	-fx-background-color: rgba(255,255,255,0.50);
+	-fx-font-family: "Copperplate Gothic Bold";
+	-fx-font-size: 36pt;
+}
+
+#tile33 {
+		
+	-fx-border-color: grey;
+	-fx-background-color: rgba(255,255,255,0.50);
+	-fx-font-family: "Copperplate Gothic Bold";
+	-fx-font-size: 36pt;
+}
+/* End of puzzle labels */
+
+
+
 #peakButton:pressed {
     -fx-background-color: black;
     -fx-text-fill: white;
